@@ -1,0 +1,40 @@
+<template name="user">
+	{{#if currentUser}}
+	{{#if user}}
+
+	
+	<div class="row">
+		{{#with user.profile}}
+		<div class="col-md-2 col-md-offset-3">
+			<img class="img img-responsive img-thumbnail" src="{{avatar}}" alt="Post Author"/>
+		</div>
+		{{/with}}
+		<div class="col-md-4">
+			{{#with user.profile}}
+			<h5>{{name}}</h5>
+			<p>{{about}}</p>
+			{{/with}}
+
+			<p>Seguidores: {{followers}} | Seguindo: {{followings}}</p>
+			
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-2 col-md-offset-3">
+			{{> followButton}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-6 col-xs-6 col-md-6 col-sm-offset-3 col-xs-offset-3 col-md-offset-3">
+		<hr>
+			{{> timeline}}
+		</div>
+	</div>
+
+	{{else}}
+	<h1>Usuário não identificado.</h1>
+	{{/if}}
+	{{else}}
+	<h1 class="text-center"><a href="{{pathFor 'home'}}">Você não está logado. :-(</a></h1>
+	{{/if}}
+</template>
