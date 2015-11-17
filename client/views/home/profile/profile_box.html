@@ -1,10 +1,11 @@
 <template name="profileBox">
 	{{#with currentUser.profile}}
-	<div class="center-block">
+	<div class="center-block text-center">
 		<img class="img img-responsive img-thumbnail" src="{{avatar}}" alt="Post Author"/>
 	</div>
-	<h4>{{name}}</h4>
-	<p>{{about}}</p>
+	<h5 class="text-center">{{name}}</h5>
+	<p class="text-center about">{{about}}</p>
+
 	<button class="btn btn-block">
 		Editar perfil
 	</button>

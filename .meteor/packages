@@ -31,4 +31,3 @@ ejson
 iron:router
 meteorhacks:fast-render
 arunoda:find-faster
-appcache

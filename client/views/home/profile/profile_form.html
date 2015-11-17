@@ -1,11 +1,12 @@
 <template name="profileForm">
- <form class="form-horizontal">
-  <input type="text" class="form-control" 
-         placeholder="Nome">
-  <input type="text" class="form-control" 
-         placeholder="Descrição">
-  <button class="btn btn-success">
-   Atualizar
-  </button>
- </form>
+<h4 class="text-center">Editar perfil</h4>
+	<form class="form-horizontal">
+		<input type="text" class="form-control" placeholder="Nome" value="{{currentUser.profile.name}}">
+		<br>
+		<input type="text" class="form-control" placeholder="Descrição" value="{{currentUser.profile.about}}">
+		<br>
+		<button class="btn btn-success btn-block">
+			Atualizar
+		</button>
+	</form>
 </template>
