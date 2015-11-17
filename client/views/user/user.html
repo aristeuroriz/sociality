@@ -1,0 +1,21 @@
+<template name="user">
+	{{#if user}}
+	<section class="col-xs-12 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+		{{#with user.profile}}
+		<div class="row">
+			<div class="col-md-3">
+			<img class="img img-responsive img-thumbnail" src="" alt="Post Author"/>
+			</div>
+			<div class="col-md-9">
+				<h1 class="white">{{name}}</h1>
+			</div>
+		</div>
+		<p>{{about}}</p>
+		{{/with}}
+	</section>
+	
+	{{else}}
+	<h1>Usuário não identificado.</h1>
+	<a href="{{pathFor 'home'}}">Homepage</a>
+	{{/if}}
+</template>

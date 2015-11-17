@@ -1,0 +1,28 @@
+<template name="timeline">
+  <div class="row">
+    <fieldset class="col-md-12 col-sm-12 col-xs-12">
+      <legend class="white">Últimos posts</legend>
+      {{#each posts}}
+      <blockquote class="lead">
+        <div class="row">
+          <div class="col-md-4 col-xs-4 col-sm-4">
+            <img class="img img-responsive img-thumbnail avatar-post" src="{{avatar}}" alt="Post Author"/>
+          </div>
+          <div class="col-md-8 col-xs-8 col-sm-8">
+            <small>
+              <b><a class="name-posts" href="/user/{{userId}}">{{name}}</a></b>
+              <span class="very-small"> diz:</span>
+            </small>
+            <p class="posts">{{message}}</p>
+          </div>
+        </div>
+      </blockquote>
+      <hr>
+      {{else}}
+      <p class="lead text-center white">
+        Nenhum post publicado.
+      </p>
+      {{/each}}
+    </fieldset>
+  </div>
+</template>

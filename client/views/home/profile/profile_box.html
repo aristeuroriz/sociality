@@ -1,0 +1,17 @@
+<template name="profileBox">
+	{{#with currentUser.profile}}
+	<div class="center-block">
+		<img class="img img-responsive img-thumbnail" src="{{avatar}}" alt="Post Author"/>
+	</div>
+	<h4>{{name}}</h4>
+	<p>{{about}}</p>
+	<button class="btn btn-block">
+		Editar perfil
+	</button>
+	{{else}}
+	<p>Perfil incompleto</p>
+	<button class="btn btn-block">
+		Completar perfil
+	</button>
+	{{/with}}
+</template>

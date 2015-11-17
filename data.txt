@@ -1,0 +1,11 @@
+Facebook (App Development - Test)
+APP_ID: 885128941576104
+APP_SECRET: 3b74fa95859bc29053580d39261566f6
+
+Facebook (Sua Receita - Production)
+APP_ID: 461098644070249
+APP_SECRET: 614a70b85bf6325a33fd200fd0703bdb
+
+Google
+CLIENT_ID: 478551640333-gsgouts0rrlu5d4fnf12eqndc994f25o.apps.googleusercontent.com
+SECRET_KEY: m0VthYtxuC2TCwhA7NLeN2w6
