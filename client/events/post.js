@@ -6,5 +6,8 @@ Template.post.events({
         var avatar = Meteor.user().profile.avatar;
         Meteor.call("publishPost", textarea.value, name, avatar);
         textarea.value = "";
+    },
+     'click .like': function() {
+        this.like()
     }
 });
