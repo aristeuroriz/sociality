@@ -1,23 +1,26 @@
 describe("account actions", function() {
 
-    // ========== should login and logout ==========
-    it("should login and logout", function(done) {
+    beforeEach(function() {
 
-        if (Meteor.users.find({
-            email: 'test@test.com'
-        })) {
-             console.log('==========>>> User already exists!')
-        } else {
-            Accounts.createUser({
-                username: 'teste',
-                email: 'test@test.com',
-                password: 'testing',
-                profile: {
-                    //publicly visible fields like firstname goes here
-                }
-            });
-            console.log('==========>>> User created!')
-        }
+            if (Meteor.users.find({
+                email: 'test@test.com'
+            })) {
+                console.log('==========>>> User already exists!')
+            } else {
+                Accounts.createUser({
+                    username: 'teste',
+                    email: 'test@test.com',
+                    password: 'testing',
+                    profile: {
+                        //publicly visible fields like firstname goes here
+                    }
+                });
+                console.log('==========>>> User created!')
+            }
+        });
+
+    // ========== should login and logout manually ==========
+    it("login and logout manually", function(done) {
 
         Meteor.loginWithPassword("test@test.com", "testing", function(err) {
             expect(err).toBeUndefined();
@@ -29,5 +32,5 @@ describe("account actions", function() {
         });
 
     });
-    // ========== should login and logout ==========
+    // ========== should login and logout manually ==========
 });
