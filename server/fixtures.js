@@ -4,13 +4,7 @@ Meteor.startup(function() {
         var users = [{
             name: "Normal User",
             email: "test@test.com",
-            roles: [],
             password: "testing"
-        }, {
-            name: "Admin User",
-            email: "admin@test.com",
-            roles: ['admin'],
-            password: "admin3210"
         }];
 
         _.each(users, function(user) {
@@ -21,10 +15,6 @@ Meteor.startup(function() {
                     name: user.name
                 }
             });
-
-            if (user.roles.length > 0) {
-                Roles.addUsersToRoles(id, user.roles);
-            }
         });
     };
 });
