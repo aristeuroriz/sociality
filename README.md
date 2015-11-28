@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/aristeuroriz/sociality.svg?branch=master)](https://travis-ci.org/aristeuroriz/sociality)
+[![Build Status](http://jenkins.zapto.org/job/Sociality/badge/icon)](http://localhost:8080/job/Sociality/)
 
 Sociality - Meteor Application 
 
